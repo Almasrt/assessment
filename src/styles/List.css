@@ -1,0 +1,10 @@
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  ul:hover {
+    padding: 20px;
+    color: rgb(43, 106, 224);
+  }
