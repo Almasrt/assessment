@@ -11,7 +11,6 @@ const Home = () => {
 
     //selected categories
     const [selected, setSelected] = useState([]);
-    const [rec, setRec] = useState([]);
 
     //all the posts
     const [data, setData] = useState([]);
@@ -27,7 +26,7 @@ const Home = () => {
     const indexOfFirstRecord = indexOfLastRecord - recordsPerPage;
 
     /*Posts displayed on the current page, slice(a,b) returns posts from
-    index a to b*/
+    index a to b, if no posts selectioned all posts are displayed*/
     let currentRecords;
     if(showRecords.length > 0){
         currentRecords = showRecords.slice(indexOfFirstRecord, indexOfLastRecord);
@@ -56,6 +55,7 @@ const Home = () => {
         var listCategories = []
         for (const post of data){
             for (const category of post.categories){
+                //nbApparition permits to check that a category is not pushed in the list twice 
                 let nbApparition = 0; 
                 for(var i = 0; i<listCategories.length; i++){
                     if (listCategories[i] == category.name){
@@ -89,9 +89,8 @@ const Home = () => {
     }, [selected])
 
     const getFilteredPosts = () => {
-        setShowRecords([])
         function filter(post) {
-            //count the umber of categories of the post that are in the selected categories
+            //count the number of categories of the post that are in the selected categories
             let catOk = 0;
             for (let x = 0; x < post.categories.length; x++) {
                 for( let y = 0; y < selected.length; y++ ) {
@@ -102,8 +101,7 @@ const Home = () => {
                     }
                 }
             }
-            console.log(catOk)
-            console.log(post)
+            //put in currentRecords the posts in which minimum 1 category is selected
             return catOk > 0;
         }
         currentRecords = data?.filter(filter);
