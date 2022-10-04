@@ -14,10 +14,42 @@ code {
 
 h2 {
   text-align: center;
-  padding-bottom: 15px;
-  padding-top: 15px;
+  padding-top: 2%;
 }
 
 .select {
-  padding-bottom: 10px;
+  padding-bottom: 1%;
+}
+
+.home-author {
+  display: flex;
+  margin: 10px;
+}
+
+.card-subtitle.mb-2.text-muted {
+  padding-top: 30px;
+  margin-left: 1%;
+}
+
+.auth-name {
+  padding-top: 15px;
+  margin-left: 5px;
+  margin-top: 10px;
+}
+
+.details {
+  margin: 2%;
+  padding: 2%;
+  text-align: center;
+}
+
+.element-title {
+  padding: 2%;
+  text-decoration: underline;
+}
+
+.details-author{
+  display: flex;
+  margin-left: 70%;
+  margin-bottom: 10px;
 }
