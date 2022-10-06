@@ -6,7 +6,7 @@ const Detail = (props) => {
         <>
         <nav class="navbar navbar-light">
                 <a class="navbar-brand" href="/">
-                    <img src="https://img.freepik.com/free-icon/dwelling-house_318-1861.jpg?w=826&t=st=1664910015~exp=1664910615~hmac=9b84679bdbdcdb4083ebdcc42d092e76eba8861127b7c35ceeb398c188d4fdb9" width="30" height="30" alt="Home icon"></img>
+                    <img src="logoH.ico"></img>
                 </a>
             </nav>
         <div className="details">

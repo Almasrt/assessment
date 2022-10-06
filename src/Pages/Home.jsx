@@ -119,7 +119,7 @@ const Home = () => {
                 isSearchable={true}
             />
             <List posts={currentRecords}></List>
-            <footer className="bg-light text-center text-lg-start">
+            <footer className="text-center text-lg-start">
                 <div className="text-center p-3">
                     <Pagination
                         nPages = { nPages }
